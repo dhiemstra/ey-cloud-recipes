@@ -3,6 +3,9 @@
 #    echo "i ran at #{Time.now}" >> /root/cheftime
 #  }
 #end
+#
+#uncomment to turn on memcached
+include_recipe "delayed_job"
 
 # uncomment to deny access to /log, /config, and .git directories as well as any .yml files
 # include_recipe "deny-directories"
@@ -23,7 +26,7 @@
 # include_recipe "sidekiq"
 
 #uncomment to turn on memcached
-# include_recipe "memcached"
+include_recipe "memcached"
 
 #uncomment ot run the riak recipe
 # include_recipe "riak"
